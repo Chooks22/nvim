@@ -17,8 +17,21 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
+    dependencies = {
+      {
+        "onsails/lspkind-nvim",
+        lazy = true,
+      },
+    },
     opts = function(_, opts)
       local cmp = require "cmp"
+
+      opts.formatting = {
+        format = require("lspkind").cmp_format {
+          before = require("tailwind-tools.cmp").lspkind_format,
+        },
+      }
+
       -- modify the sources part of the options table
       opts.sources = cmp.config.sources {
         { name = "nvim_lsp", priority = 1000 },
