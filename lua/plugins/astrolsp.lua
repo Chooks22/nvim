@@ -7,6 +7,17 @@ return {
     "AstroNvim/astrolsp",
     ---@type AstroLSPOpts
     opts = {
+      formatting = {
+        format_on_save = {
+          ignore_filetypes = {
+            "javascript",
+            "typescript",
+            "javascriptreact",
+            "typescriptreact",
+            "svelte",
+          },
+        },
+      },
       servers = { "nginx_language_server" },
       ---@diagnostic disable-next-line: missing-fields
       config = {

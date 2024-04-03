@@ -15,5 +15,21 @@ return {
         ["<leader>tt"] = { "<cmd>ToggleTerm<cr>", desc = "ToggleTerm float" },
       },
     },
+    autocmds = {
+      formatters = {
+        {
+          event = "BufWritePre",
+          desc = "Eslint Format",
+          pattern = { "*.js", "*.ts", "*.jsx", "*.tsx", "*.svelte", "*.astro" },
+          command = "silent! EslintFixAll",
+        },
+        {
+          event = "BufWritePre",
+          desc = "Tailwind Format",
+          pattern = { "*.jsx", "*.tsx", "*.svelte", "*.astro" },
+          command = "silent! TailwindSort",
+        },
+      },
+    },
   },
 }
