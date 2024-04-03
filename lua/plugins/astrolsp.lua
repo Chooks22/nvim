@@ -24,7 +24,9 @@ return {
         nginx_language_server = {
           cmd = { "nginx-language-server" },
           filetypes = { "nginx" },
-          root_dir = require("lspconfig.util").root_pattern("nginx", "conf.d", "nginx.conf"),
+          root_dir = function(path)
+            return require("lspconfig.util").root_pattern("nginx", "conf.d", "nginx.conf")(path)
+          end,
         },
         jsonls = {
           on_new_config = function(config)
