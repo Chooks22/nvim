@@ -27,7 +27,7 @@ return {
           event = "BufWritePre",
           desc = "Tailwind Format",
           pattern = { "*.jsx", "*.tsx", "*.svelte", "*.astro" },
-          command = "silent! TailwindSort",
+          callback = function() require("tailwind-sorter").sort(0) end,
         },
       },
     },
