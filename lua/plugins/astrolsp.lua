@@ -73,7 +73,17 @@ return {
   },
   "b0o/SchemaStore.nvim",
   {
+    "pappasam/nginx-language-server",
+    lazy = true,
+    opts = {},
+  },
+  {
     "yioneko/nvim-vtsls",
     lazy = true,
+  },
+  {
+    "jmbuhr/otter.nvim",
+    lazy = true,
+    opts = {},
   },
 }

@@ -48,6 +48,10 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     ---@type TailwindTools.Option
-    opts = {},
+    opts = {
+      document_color = {
+        kind = "background",
+      },
+    },
   },
 }

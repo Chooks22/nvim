@@ -1,0 +1,28 @@
+{
+  "function": {
+    "prefix": "fnd",
+    "description": "Function",
+    "body": [
+      "function $1() {",
+      "}"
+    ]
+  },
+  "async-function": {
+    "prefix": "afnd",
+    "description": "Async Function",
+    "body": [
+      "async function $1() {",
+      "}"
+    ]
+  },
+  "export": {
+    "prefix": "xp",
+    "description": "export $1",
+    "body": "export $1"
+  },
+  "export-default": {
+    "prefix": "xpd",
+    "description": "export default $1",
+    "body": "export default $1"
+  }
+}
