@@ -28,6 +28,28 @@ return {
             return require("lspconfig.util").root_pattern("nginx", "conf.d", "nginx.conf")(path)
           end,
         },
+        cssls = {
+          settings = {
+            css = {
+              validate = true,
+              lint = {
+                unknownAtRules = "ignore",
+              },
+            },
+            scss = {
+              validate = true,
+              lint = {
+                unknownAtRules = "ignore",
+              },
+            },
+            less = {
+              validate = true,
+              lint = {
+                unknownAtRules = "ignore",
+              },
+            },
+          },
+        },
         jsonls = {
           on_new_config = function(config)
             config.settings.json.schemas = config.settings.json.schemas or {}
