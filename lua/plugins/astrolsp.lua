@@ -14,7 +14,6 @@ return {
             "typescript",
             "javascriptreact",
             "typescriptreact",
-            "svelte",
           },
         },
       },
